@@ -15,6 +15,7 @@ const Tilt = TiltLib.default || TiltLib;
 import situationMirror from "../assets/situationmirriorworkavif.avif";
 import bs from "../assets/bs.jpg"
 import ls from "../assets/ls.jpg"
+import hvac from "../assets/hvac.png"
 gsap.registerPlugin(ScrollTrigger);
 
 const PROJECTS = [
@@ -32,13 +33,14 @@ const PROJECTS = [
     image: ls, // Yahan apni locksmith ki image ka variable lagana
     url: "https://locksmithpoc.vercel.app"
   },
-//   {
-//     title: "BizGenie Roadmap AI",
-//     tags: ["React", "Redux", "AI Business"],
-//     marquee: "BIZGENIE",
-//     image: situationMirror, // Yahan apni BizGenie ki image ka variable lagana
-//     url: "https://github.com/aarish-samhorizons" // Isko BizGenie ke live link se replace kar dena
-//   },
+  
+{
+    title: "HVAC Services",
+    tags: ["AI Automation", "React", "Node.js"],
+    marquee: "HVAC SERVICES",
+    image: hvac, // Yahan apni HVAC ki image ka variable lagana
+    url: "https://client-pqht.vercel.app"
+  }
 ];
 
 export default function Work() {
@@ -51,7 +53,7 @@ export default function Work() {
       const cards = cardsRef.current;
       const marquees = marqueesRef.current;
 
-      if (cards.length < 1) return;
+      if (cards.length < 2) return;
 
       // 1. INITIAL STATES
       gsap.set(cards[0], { rotateX: 0, autoAlpha: 1, display: "block" });
